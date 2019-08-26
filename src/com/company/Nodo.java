@@ -18,6 +18,9 @@ public class Nodo {
             filhos = new Nodo[qtdf];
         }
     }
+    public Nodo(){
+
+    }
     public Nodo[] getFilhos() {
         return filhos;
     }
