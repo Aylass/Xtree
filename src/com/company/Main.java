@@ -11,13 +11,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        int nivel=1;
         //int[] aux=new int[100];
         ArrayList aux= new ArrayList();
         Nodo n= new Nodo();
         readFile("teste.txt",aux);
         ponteiro auxx=new ponteiro(aux);
         pam(n, auxx);
-
     }
 
     public static ArrayList readFile(String nomeArq,ArrayList aux){
@@ -55,13 +55,38 @@ public class Main {
     {
         int le=letexto(aux);
         System.out.println(le);
-       
+       if(le>0)
+       {
+           while(le>0)
+           {
+               Nodo n=new Nodo();
+               n.setPai(nodo);
+               nodo.getFilhos().add(nodo);
+                le--;
+               System.out.println("   pai: "+n.getPai() );
+           }
+       }
+       le=letexto(aux);
+        //System.out.println(le);
+        nodo.valores=new ArrayList(le);
+        for(int i=0;i<nodo.getFilhos().size();i++)
+        {
+            pam(nodo.getFilhos().get(i),aux);
+        }
+
+        for(int i=0;i<nodo.getValores().size();i++)
+        {
+            le=letexto(aux);
+            nodo.getValores().add(le);
+        }
+
     }
 
     public static int letexto(ponteiro p) {
       int cont2=p.cont;
       cont2++;
       p.setCont(cont2);
+        //System.out.println(cont2);
       return (int) p.getAux().get(cont2);
     }
 }
