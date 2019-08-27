@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Nodo {
     private Nodo pai;
-    public ArrayList filhos= new ArrayList();
+    public ArrayList<Nodo> filhos= new ArrayList<Nodo>();
     public int[] valores;
     private int nivel;
 
@@ -22,6 +22,10 @@ public class Nodo {
     }
     public Nodo(){
 
+    }
+
+    public void setanivel(){
+        this.nivel = pai.getNivel() + 1;
     }
     public ArrayList<Nodo> getFilhos() {
         return filhos;

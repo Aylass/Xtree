@@ -19,6 +19,9 @@ public class Main {
         ponteiro auxx=new ponteiro(aux);
 
         pam(n, auxx);
+        int[] karol = n.getValores();
+        System.out.println("Valores: " + karol[0]);
+        caminha(n);
     }
 
     public static ArrayList readFile(String nomeArq,ArrayList aux){
@@ -55,7 +58,7 @@ public class Main {
     public static void pam(Nodo nodo,ponteiro aux)
     {
         int le=letexto(aux);
-        System.out.println(le);
+       // System.out.println(le);
        if(le>0)
        {
            while(le>0)
@@ -63,13 +66,13 @@ public class Main {
                Nodo n=new Nodo();
                n.setPai(nodo);
                nodo.getFilhos().add(n);
-
+                n.setanivel();
                 le--;
-               System.out.println("   pai: "+n.getPai() );
+               //System.out.println("   nivel: "+n.getNivel());
            }
        }
        le=letexto(aux);
-        System.out.println("aqui "+le);
+        //System.out.println("aqui "+le);
         nodo.valores=new int[le];
         //System.out.println(nodo.valores.size());
         for(int i=0;i<nodo.getFilhos().size();i++)
@@ -80,7 +83,7 @@ public class Main {
         for(int i=0;i<nodo.valores.length;i++)
         {
             le=letexto(aux);
-            System.out.println("ei "+le);
+            //System.out.println("ei "+le);
             nodo.getValores()[i]=le;
         }
 
@@ -90,7 +93,17 @@ public class Main {
       int cont2=p.cont;
       cont2++;
       p.setCont(cont2);
-        //System.out.println(cont2);
+      //System.out.println(cont2);
       return (int) p.getAux().get(cont2);
+    }
+
+    public static void caminha(Nodo n){
+        int[] val = n.valores;
+        for(int i = 0; i<val.length;i++){
+            System.out.println("Valor: " + val[i]);
+        }
+        for(Nodo fio: n.filhos){
+            caminha(fio);
+        }
     }
 }
