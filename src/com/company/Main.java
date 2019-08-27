@@ -17,6 +17,7 @@ public class Main {
         Nodo n= new Nodo();
         readFile("teste.txt",aux);
         ponteiro auxx=new ponteiro(aux);
+
         pam(n, auxx);
     }
 
@@ -61,23 +62,26 @@ public class Main {
            {
                Nodo n=new Nodo();
                n.setPai(nodo);
-               nodo.getFilhos().add(nodo);
+               nodo.getFilhos().add(n);
+
                 le--;
                System.out.println("   pai: "+n.getPai() );
            }
        }
        le=letexto(aux);
-        //System.out.println(le);
-        nodo.valores=new ArrayList(le);
+        System.out.println("aqui "+le);
+        nodo.valores=new int[le];
+        //System.out.println(nodo.valores.size());
         for(int i=0;i<nodo.getFilhos().size();i++)
         {
             pam(nodo.getFilhos().get(i),aux);
         }
 
-        for(int i=0;i<nodo.getValores().size();i++)
+        for(int i=0;i<nodo.valores.length;i++)
         {
             le=letexto(aux);
-            nodo.getValores().add(le);
+            System.out.println("ei "+le);
+            nodo.getValores()[i]=le;
         }
 
     }

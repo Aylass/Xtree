@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public class Nodo {
     private Nodo pai;
-    public ArrayList filhos;
-    public ArrayList valores = new ArrayList();
+    public ArrayList filhos= new ArrayList();
+    public int[] valores;
     private int nivel;
 
     public Nodo(Nodo paii, int qtdf){
+
         if(pai!=null) {
             this.pai = paii;
             nivel = pai.getNivel() + 1;
@@ -17,6 +18,7 @@ public class Nodo {
             nivel = 0;
             filhos = new ArrayList<Nodo> (qtdf);
         }
+
     }
     public Nodo(){
 
@@ -24,11 +26,11 @@ public class Nodo {
     public ArrayList<Nodo> getFilhos() {
         return filhos;
     }
-    public ArrayList getValores() {
+    public int[] getValores() {
         return valores;
     }
 
-    public void setValores(ArrayList valores) { this.valores = valores; }
+    public void setValores(int[] valores) { this.valores = valores; }
 
     public int getNivel() {
         return nivel;
