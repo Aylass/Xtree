@@ -21,8 +21,10 @@ public class Main {
 
         pam(n, auxx);
 
-        tree.caminha(tree.getRaiz());
-        System.out.println(tree.soma);
+        tree.caminhaSoma(tree.getRaiz());
+        tree.caminhaQuantNodos(tree.getRaiz());
+        System.out.println("Soma dos valores: " + tree.soma);
+        System.out.println("Quantidade de Nodos: " + tree.quantnodo);
         //int[] karol = n.getValores();
         //System.out.println("Valores: " + karol[0]);
         //caminha(n);
