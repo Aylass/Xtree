@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9e94bdd-8a36-4058-8a69-2e82b318a902" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Xtree/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Xtree/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Xtree/com/company/Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Xtree/com/company/Nodo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Nodo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Xtree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Xtree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,8 @@
       <workItem from="1566493613165" duration="8000" />
       <workItem from="1566503180485" duration="1092000" />
       <workItem from="1566845986510" duration="4173000" />
-      <workItem from="1566941598900" duration="911000" />
+      <workItem from="1566941598900" duration="996000" />
+      <workItem from="1566952146002" duration="1288000" />
     </task>
     <servers />
   </component>
@@ -106,7 +105,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

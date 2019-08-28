@@ -15,13 +15,17 @@ public class Main {
         //int[] aux=new int[100];
         ArrayList aux= new ArrayList();
         Nodo n= new Nodo();
+        Xtree tree = new Xtree(n);
         readFile("teste.txt",aux);
         ponteiro auxx=new ponteiro(aux);
 
         pam(n, auxx);
-        int[] karol = n.getValores();
-        System.out.println("Valores: " + karol[0]);
-        caminha(n);
+
+        tree.caminha(tree.getRaiz());
+        System.out.println(tree.soma);
+        //int[] karol = n.getValores();
+        //System.out.println("Valores: " + karol[0]);
+        //caminha(n);
     }
 
     public static ArrayList readFile(String nomeArq,ArrayList aux){
