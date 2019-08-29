@@ -2,7 +2,7 @@ package com.company;
 
 public class Xtree {
     private Nodo raiz;
-    private int nivel;
+    public int nivel;
     public int soma;
     public int quantnodo;
 
@@ -43,5 +43,19 @@ public class Xtree {
         for(Nodo fio: n.filhos){
             caminhaSoma(fio);
         }
+    }
+    public int caminhaNivel(Nodo n){
+        int cont, max = 0;
+        if(n.filhos.size()>0){//se tem filho
+            for (Nodo fio: n.filhos) {
+                cont = caminhaNivel(fio);
+                if(cont > max){
+                    max = cont;
+                }
+            }
+        }else{
+            max = n.getNivel();
+        }
+        return max;
     }
 }

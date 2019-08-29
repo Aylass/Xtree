@@ -23,8 +23,10 @@ public class Main {
 
         tree.caminhaSoma(tree.getRaiz());
         tree.caminhaQuantNodos(tree.getRaiz());
+        tree.setNivel(tree.caminhaNivel(tree.getRaiz()));
         System.out.println("Soma dos valores: " + tree.soma);
         System.out.println("Quantidade de Nodos: " + tree.quantnodo);
+        System.out.println("Nível da árvore: " + tree.nivel);
         //int[] karol = n.getValores();
         //System.out.println("Valores: " + karol[0]);
         //caminha(n);
