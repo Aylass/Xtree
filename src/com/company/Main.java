@@ -17,8 +17,12 @@ public class Main {
         Nodo n= new Nodo();
         n.setNivel(0);
         Xtree tree = new Xtree(n);
-        readFile("teste.txt",aux);
-        ponteiro auxx=new ponteiro(aux);
+
+        //Trocar o nome dos casos para outros testes.
+        System.out.println("\nCaso 12: ");
+        readFile("casom.txt",aux);
+
+        ponteiro auxx = new ponteiro(aux);
         arvore(n, auxx);
 
         tree.caminhaSoma(tree.getRaiz());
@@ -27,9 +31,6 @@ public class Main {
         System.out.println("Soma dos valores: " + tree.soma);
         System.out.println("Quantidade de Nodos: " + tree.quantnodo);
         System.out.println("Nível da árvore: " + tree.nivel);
-        //int[] karol = n.getValores();
-        //System.out.println("Valores: " + karol[0]);
-        //caminha(n);
     }
 
     public static ArrayList readFile(String nomeArq,ArrayList aux){
