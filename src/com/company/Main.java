@@ -11,15 +11,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int nivel=1;
+
         //int[] aux=new int[100];
         ArrayList aux= new ArrayList();
         Nodo n= new Nodo();
+        n.setNivel(0);
         Xtree tree = new Xtree(n);
         readFile("teste.txt",aux);
         ponteiro auxx=new ponteiro(aux);
-
-        pam(n, auxx);
+        arvore(n, auxx);
 
         tree.caminhaSoma(tree.getRaiz());
         tree.caminhaQuantNodos(tree.getRaiz());
@@ -61,7 +61,7 @@ public class Main {
         return aux;
     }
 
-    public static void pam(Nodo nodo,ponteiro aux)
+    public static void arvore(Nodo nodo,ponteiro aux)
     {
         int le=letexto(aux);
        // System.out.println(le);
@@ -83,7 +83,7 @@ public class Main {
         //System.out.println(nodo.valores.size());
         for(int i=0;i<nodo.getFilhos().size();i++)
         {
-            pam(nodo.getFilhos().get(i),aux);
+            arvore(nodo.getFilhos().get(i),aux);
         }
 
         for(int i=0;i<nodo.valores.length;i++)
