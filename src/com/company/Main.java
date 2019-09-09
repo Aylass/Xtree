@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+        long tempoInicial = System.currentTimeMillis();
         //int[] aux=new int[100];
         ArrayList aux= new ArrayList();
         Nodo n= new Nodo();
@@ -19,8 +19,8 @@ public class Main {
         Xtree tree = new Xtree(n);
 
         //Trocar o nome dos casos para outros testes.
-        System.out.println("\nCaso 12: ");
-        readFile("casom.txt",aux);
+        System.out.println("\nCaso 3: ");
+        readFile("casom3.txt",aux);
 
         ponteiro auxx = new ponteiro(aux);
         arvore(n, auxx);
@@ -31,6 +31,7 @@ public class Main {
         System.out.println("Soma dos valores: " + tree.soma);
         System.out.println("Quantidade de Nodos: " + tree.quantnodo);
         System.out.println("Nível da árvore: " + tree.nivel);
+        System.out.println("O método executou em: " + (System.currentTimeMillis() - tempoInicial) + " ms");
     }
 
     public static ArrayList readFile(String nomeArq,ArrayList aux){
@@ -88,14 +89,12 @@ public class Main {
         {
             arvore(nodo.getFilhos().get(i),aux);
         }
-
         for(int i=0;i<nodo.valores.length;i++)
         {
             le=letexto(aux);
             //System.out.println("ei "+le);
             nodo.getValores()[i]=le;
         }
-
     }
 
     public static int letexto(ponteiro p) {
